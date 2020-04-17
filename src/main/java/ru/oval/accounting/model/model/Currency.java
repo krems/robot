@@ -26,7 +26,7 @@ public enum Currency {
 
     public static Optional<Currency> find(final String name) {
         for (final Currency value : VALUES) {
-            if (value.name.equals(name)) {
+            if (value.name.equalsIgnoreCase(name)) {
                 return Optional.of(value);
             }
         }

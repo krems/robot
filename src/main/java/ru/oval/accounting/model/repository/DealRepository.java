@@ -2,6 +2,7 @@ package ru.oval.accounting.model.repository;
 
 import ru.oval.accounting.model.model.deals.Deal;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
@@ -16,4 +17,11 @@ public class DealRepository {
     }
 
 
+    public static Collection<Deal> findAll(final Integer userId) {
+        return deals.values();
+    }
+
+    public static boolean remove(final Integer userId, final long dealId) {
+        return deals.remove(dealId) != null;
+    }
 }

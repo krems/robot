@@ -12,6 +12,7 @@ import java.time.LocalDate;
 @ToString
 @EqualsAndHashCode
 public abstract class Deal {
+   public int id = 1;//fixme
    public final Account accountFrom;
    public final Account accountTo;
    public final BigDecimal notional;

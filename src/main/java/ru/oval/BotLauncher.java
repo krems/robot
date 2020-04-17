@@ -17,11 +17,9 @@ public class BotLauncher {
 
     public static void main(final String[] args) {
         try {
-            log.info("Started with params: {}", Arrays.toString(args));
+            log.info("Starting with params: {}", Arrays.toString(args));
             setUp();
-            log.debug("Setup done");
             final TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
-            log.debug("API created");
             addSession(telegramBotsApi.registerBot(new AccountingBot()));
             log.info("Started");
         } catch (TelegramApiException e) {
@@ -45,6 +43,7 @@ public class BotLauncher {
 //                session.stop();
                 log.debug("Session stopped");
             }
+            log.info("Stopped");
         }));
     }
 }
