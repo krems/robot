@@ -1,4 +1,4 @@
-package ru.oval.accounting.model;
+package ru.oval.accounting.model.model;
 
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
@@ -24,7 +24,7 @@ public enum Currency {
 
     private static final Currency[] VALUES = values();
 
-    public Optional<Currency> find(final String name) {
+    public static Optional<Currency> find(final String name) {
         for (final Currency value : VALUES) {
             if (value.name.equals(name)) {
                 return Optional.of(value);

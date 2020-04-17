@@ -1,10 +1,9 @@
-package ru.oval.accounting.model;
+package ru.oval.accounting.model.model.deals;
 
-import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
-import lombok.extern.java.Log;
+import ru.oval.accounting.model.model.Account;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -12,12 +11,9 @@ import java.time.LocalDate;
 @RequiredArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class Deal {
-   public final Side side;
-   public final Ticker ticker;
+public abstract class Deal {
+   public final Account accountFrom;
+   public final Account accountTo;
    public final BigDecimal notional;
-   public final BigDecimal price;
    public final LocalDate dealDate;
-   public final Currency currency;
-   public final BigDecimal accNotional;
 }

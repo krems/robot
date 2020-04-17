@@ -1,4 +1,4 @@
-package ru.oval.accounting.model;
+package ru.oval.accounting.model.model;
 
 import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
